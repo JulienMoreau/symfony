@@ -43,7 +43,7 @@ doctrine:
     dbal:
         driver: pdo_sqlite
         charset: UTF8
-        path: "%kernel.root_dir%/app/Resources/db.sqlite"
+        path: "%kernel.root_dir%/../app/Resources/db.sqlite"
         # if using pdo_sqlite as your database driver:
         #   1. add the path in parameters.yml
         #     e.g. database_path: "%kernel.project_dir%/var/data/data.sqlite"
