@@ -23,6 +23,11 @@ class Article {
      */
     protected $title;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="AppBundle\Entity\Author", inversedBy="articles")
+     */
+    protected $author;
+
     public function getId()
     {
         return $this->id;
@@ -51,5 +56,29 @@ class Article {
     public function getTitle()
     {
         return $this->title;
+    }
+
+    /**
+     * Set author
+     *
+     * @param \AppBundle\Entity\Author $author
+     *
+     * @return Article
+     */
+    public function setAuthor(\AppBundle\Entity\Author $author = null)
+    {
+        $this->author = $author;
+
+        return $this;
+    }
+
+    /**
+     * Get author
+     *
+     * @return \AppBundle\Entity\Author
+     */
+    public function getAuthor()
+    {
+        return $this->author;
     }
 }

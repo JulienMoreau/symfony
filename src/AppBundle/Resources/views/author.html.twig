@@ -1,0 +1,14 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+    <p>Fist name : {{ author.firstName }}</p>
+    <p>Last name : {{ author.lastName }}</p>
+    <p>user name : {{ author.username }}</p>
+
+    <ul>
+    {% for article in author.articles %}
+        <li>{{ article.title }}</li>
+    {% endfor %}
+    </ul>
+{% endblock %}
