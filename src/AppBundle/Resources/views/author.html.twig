@@ -11,4 +11,10 @@
         <li>{{ article.title }}</li>
     {% endfor %}
     </ul>
+
+    {{ form_start(form) }}
+    {{ form_widget(form) }}
+    {{ form_end(form) }}
+
+    <a href="{{ path('delete_author', {'id': author.id}) }}">Supprimer</a>
 {% endblock %}
